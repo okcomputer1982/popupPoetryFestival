@@ -6,32 +6,80 @@
 	<meta charset="utf-8">
 	<title>PopupPoetryFest</title>
 	<link href="./assets/css/bootstrap.css" rel="stylesheet">
-	<link href="./assets/css/application.css" rel="stylesheet">
+	<link href="./assets/css/app.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<div class="navbar navbar-inverse navbar-fixed-top"> 
+	<div id="header" class="navbar navbar-inverse navbar-fixed-top"> 
 		<div class="navbar-inner">
 			<div class="container">
-				<h3>Popup Poetry fest</h3>
+				<h3>Popup Poetry Festival</h3>
 		    </div>
     	</div>
 	</div>
 	
-	<div id="main-region" class="container">
+	<div id="main-region" class="container"></div>
+
+	<div id="footer"> </div>
+	
+	<!-- Templates -->
+	<script type="text/template" id="splash_view">
+		<h3>Apiary Presents the Philly Popup Poetry Festival</h3>
+		<ul>
+			<li><a href="#">About Page</a></li>
+			<li><a href="#">Signup</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">Map</a></li>
+		</ul>
+	</script>
+	
+	<script type="text/template" id="about_view">
+		<h1>About Page</h1>
+	</script>
+
+	<script type="text/template" id="event_item">
+		<p><strong>{{name}}</strong></p>
+		<p>{{startTime}} - {{endTime}}</p>
+		<p>{{venue_name}}</p>
 		
-	</div>
+	</script>
+
+	<script type="text/template" id="event_collection">
+
+	</script>
+
+	<script type="text/template" id="event_collection">
+		<h3>{{name}}</h3>
+		<h4>{{startTime}} - {{endTime}}</h4>
+		<h4>{{venue_name}}</h4>
+		<h4>{{venue_address}}</h4>
+		<h4>{{description}}</h4>
+	</script>
+
+	<script type="text/template" id="event_mapscreen">
+		<h1>Map Screen</h1>
+	</script>
+
+	<script type="text/template" id="signup_form">
+		<h1>Signup Form</h1>
+	</script>
+
+	<script type="text/template" id="signup_error">
+		<h1>Signup Error</h1>
+	</script>
+
+	<script type="text/template" id="confirmation_error">
+		<h1>Signup Confirmation</h1>
+	</script>
+	
 
 	<script src="./assets/js/vendor/jquery.js"></script>
 	<script src="./assets/js/vendor/underscore.js"></script>
 	<script src="./assets/js/vendor/backbone.js"></script>
 	<script src="./assets/js/vendor/backbone.marionette.js"></script>
+	<script src="./assets/js/vendor/handlebars-v1.3.0.js"></script>
 	<script src="./assets/js/app.js"></script>
-	
-	<script>
-		PopupPoetry.start();
-	</script>
 	
 </body>
 
